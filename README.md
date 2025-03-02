@@ -25,5 +25,14 @@ Finite automata can be classified as:
 - Deterministic Finite Automata (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
 - Non-Deterministic Finite Automata (NFA) – A more flexible model where multiple transitions for the same input symbol can exist. (GeeksforGeeks, 2024)
 
+### Choice of DFA
+For this specific problem I decided to use a Deterministic Finite Automata (DFA) to represent my solution, some of the reasons why I chose this are:
+-	Since the words don’t require multiple possibilities or choices at each state, a DFA is more suited since each input symbol leads to one specific state.
+-	An NFA would allow multiple possible transitions for a single input, which is not necessary in this case.
+-	DFA is more efficient in terms of time complexity because it guarantees a single path through the states, without needing to explore multiple possible transitions.
+-	Since my set of words is relatively small, a DFA will result in a small state machine that’s easy to implement.
+-	If I make an NFA at the end I will need to translate it to a DFA to program it.
+
+
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
