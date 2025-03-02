@@ -16,7 +16,14 @@ The selected set of words from the Elven language are:
 To achieve this, we will be using two computational methods: Finite Automata and Regular expressions
 
 ### Finite Automata
-Acording to Geek for geeks
+Acording to Geek for geeks (2024)
 > Finite automata are abstract machines used to recognize patterns in input sequences. 
 >They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
 >If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. 
+
+Finite automata can be classified as:
+- Deterministic Finite Automata (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
+- Non-Deterministic Finite Automata (NFA) – A more flexible model where multiple transitions for the same input symbol can exist. (GeeksforGeeks, 2024)
+
+## References
+GeeksforGeeks. (2024, 12 septiembre). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
