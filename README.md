@@ -19,7 +19,7 @@ To achieve this, we will be using two computational methods: Finite Automata and
 Acording to Geek for geeks (2024)
 > Finite automata are abstract machines used to recognize patterns in input sequences. 
 >They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
->If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. 
+>If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. (GeeksforGeeks, 2024) 
 
 Finite automata can be classified as:
 - Deterministic Finite Automata (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
