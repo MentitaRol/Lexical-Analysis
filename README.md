@@ -63,6 +63,10 @@ Although a formal state minimization methods exist, they were not applied in thi
 
 ![Image](https://github.com/user-attachments/assets/5236cbf0-00a9-4920-b98a-cb572aa33b12)
 
+### Regular expressions
+
+
+
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
 
