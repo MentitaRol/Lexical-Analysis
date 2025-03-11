@@ -41,7 +41,7 @@ Given our selected set of words:
 **Amil, An, Anarya, Anca, And.**
 
 We can define the alphabet as:
-**Σ={A,a,d,c,i,l,m,n,r,y}**
+**Σ={A, a, d, c, i, l, m, n, r, y}**
 
 By closely analyzing our set of words, we observe that our initial state will always be **‘A’**.
 
