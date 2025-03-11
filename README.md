@@ -52,9 +52,14 @@ With this information we can build our Deterministic Finite Automata:
 VERSION 1:
 
 This is the initial design of my DFA, constructed by following the natural flow of the given set of words without applying reductions or optimizations. Each valid word is recognized while maintaining a deterministic structure.
+
 ![Image](https://github.com/user-attachments/assets/c7865433-162e-4d1c-8817-8a64521b3a74)
 
 VERSION 2:
+
+In this second version of my DFA. I minimize the number of states and eliminate redundancies, resulting in a more efficient automa that requires fewer steps to determine whether a word is valid.
+
+Although a formal state minimization methods exist, they were not applied in this case. Therefore, while this version is an improvement over the initial design, ther's still the possibility of a better optimization.
 
 ![Image](https://github.com/user-attachments/assets/5236cbf0-00a9-4920-b98a-cb572aa33b12)
 
