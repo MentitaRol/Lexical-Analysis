@@ -57,3 +57,7 @@ VERSION 2:
 
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
+
+GeeksforGeeks. (2024, enero 29). Designing Deterministic Finite Automata (SET 11). GeeksforGeeks. https://www.geeksforgeeks.org/designing-deterministic-finite-automata-set-11/
+
+Tim Randolph. (2022, 22 mayo). Example 1: Designing and Building a DFA [Vídeo]. YouTube. https://www.youtube.com/watch?v=mWqUR-N7Iqk
