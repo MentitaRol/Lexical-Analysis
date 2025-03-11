@@ -33,6 +33,27 @@ For this specific problem I decided to use a Deterministic Finite Automata (DFA)
 -	Since my set of words is relatively small, a DFA will result in a small state machine that’s easy to implement.
 -	If I make an NFA at the end I will need to translate it to a DFA to program it.
 
+## Models
+To represent and analyze our set of words, we will implement the two computational models mentioned before: Deterministic Finite Automata (DFA) and Regular expressions.
+
+### Derministic Finite Automata (DFA)
+Given our selected set of words:
+**Amil, An, Anarya, Anca, And.**
+
+We can define the alphabet as:
+**Σ={A,a,d,c,i,l,m,n,r,y}**
+
+By closely analyzing our set of words, we observe that our initial state will always be **‘A’**.
+
+In the same way we can determine that our final states will correspond to the last letters of each word: **‘l’, ‘n’, ‘a’, and ‘d’.**
+
+With this information we can build our Deterministic Finite Automata:
+
+VERSION 1:
+
+
+VERSION 2:
+
 
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
