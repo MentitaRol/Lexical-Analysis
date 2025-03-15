@@ -83,7 +83,9 @@ To ensure that every valid word starts with 'A', we begin our regular expression
 In regular expressions:
 
 ( ) : Parentheses are used to group characters
+
 | : Bar symbol is used as an ‘or’ operator, meaning one of several options can match.
+
 ? : The question mark means that the preceding part is optional
 
 We want the word to start with ‘n’ and then be followed (or not) by a group of characters ‘d’, ‘ca’, or ‘arya’, we can express this like:
