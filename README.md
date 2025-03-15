@@ -64,7 +64,49 @@ Although a formal state minimization methods exist, they were not applied in thi
 ![Image](https://github.com/user-attachments/assets/5236cbf0-00a9-4920-b98a-cb572aa33b12)
 
 ### Regular expressions
+A regular expression is a sequence of characters that defines a certain pattern. Regular expressions are normally used to search text for a group of words that matches the pattern. (Mathworks, n.d).
 
+The language accepted by a finite automaton (it can be DFA or NFA) can be easily described by a Regular expression. (TPoint Tech, n. d.).
+
+Steps to construct the regular expression for the language accepted by our automaton by analyzing some patterns that our language follow:
+
+*1.  Every word starts with the capital letter ‘A’*
+
+In regular expressions, the symbol ^ means “start of the string”.
+
+To ensure that every valid word starts with 'A', we begin our regular expression with:
+
+    ^A
+
+*2. Words start with 'A' followed by 'n' and other characters (d, ca, arya) or just the letter ‘n’*
+
+In regular expressions:
+
+( ) : Parentheses are used to group characters
+| : Bar symbol is used as an ‘or’ operator, meaning one of several options can match.
+? : The question mark means that the preceding part is optional
+
+We want the word to start with ‘n’ and then be followed (or not) by a group of characters ‘d’, ‘ca’, or ‘arya’, we can express this like:
+
+    n(d|ca|arya)?
+
+The ‘?’ makes the group (d|ca|arya) optional.  
+
+So now, the regular expression becomes:
+
+    ^A(n(d|ca|arya)?)
+
+*3. Words start with 'A' and end with the string 'mil'*
+
+Since it is only the string "mil", we can express this part simply as: 
+
+    (mil)
+
+Finally, by putting everything together, we get:
+
+    ^A((n(d|ca|arya)?)|mil)
+    
+The parentheses around ‘(n(d|ca|arya)?)|mil’ ensures that the word follows one of the two patterns.
 
 
 ## References
@@ -72,4 +114,8 @@ GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGe
 
 GeeksforGeeks. (2024, enero 29). Designing Deterministic Finite Automata (SET 11). GeeksforGeeks. https://www.geeksforgeeks.org/designing-deterministic-finite-automata-set-11/
 
+Mathworks. (n. d.).  Regular expressions. https://www.mathworks.com/help/matlab/matlab_prog/regular-expressions.html 
+
 Tim Randolph. (2022, 22 mayo). Example 1: Designing and Building a DFA [Vídeo]. YouTube. https://www.youtube.com/watch?v=mWqUR-N7Iqk
+
+TPoint Tech. (n. d.). Regular expression. www.tpointtech.com. https://www.tpointtech.com/automata-regular-expression
