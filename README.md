@@ -88,19 +88,19 @@ In regular expressions:
 
 We want the word to start with ‘n’ and then be followed (or not) by a group of characters ‘d’, ‘ca’, or ‘arya’, we can express this like:
 
-    n(d|ca|arya)?
+n(d|ca|arya)?
 
 The ‘?’ makes the group (d|ca|arya) optional.  
 
 So now, the regular expression becomes:
 
-    ^A(n(d|ca|arya)?)
+^A(n(d|ca|arya)?)
 
 **3. Words start with 'A' and end with the string 'mil'**
 
 Since it is only the string "mil", we can express this part simply as: 
 
-    (mil)
+(mil)
 
 Finally, by putting everything together, we get:
 
