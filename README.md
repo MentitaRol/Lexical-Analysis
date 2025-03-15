@@ -17,9 +17,9 @@ To achieve this, we will be using two computational methods: Finite Automaton an
 
 ### Finite Automaton
 Acording to Geek for geeks (2024)
-> Finite automata are abstract machines used to recognize patterns in input sequences. 
->They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
->If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. (GeeksforGeeks, 2024) 
+Finite automata are abstract machines used to recognize patterns in input sequences. 
+They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
+If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. (GeeksforGeeks, 2024) 
 
 Finite automaton can be classified as:
 - Deterministic Finite Automaton (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
@@ -64,9 +64,9 @@ Although a formal state minimization methods exist, they were not applied in thi
 ![Image](https://github.com/user-attachments/assets/5236cbf0-00a9-4920-b98a-cb572aa33b12)
 
 ### Regular expressions
->A regular expression is a sequence of characters that defines a certain pattern. Regular expressions are normally used to search text for a group of words >that matches the pattern. (Mathworks, n.d).
+A regular expression is a sequence of characters that defines a certain pattern. Regular expressions are normally used to search text for a group of words that matches the pattern. (Mathworks, n.d).
 
->The language accepted by a finite automaton (it can be DFA or NFA) can be easily described by a Regular expression. (TPoint Tech, n. d.).
+The language accepted by a finite automaton (it can be DFA or NFA) can be easily described by a Regular expression. (TPoint Tech, n. d.).
 
 Steps to construct the regular expression for the language accepted by our automaton by analyzing some patterns that our language follow:
 
