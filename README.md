@@ -13,20 +13,20 @@ The selected set of words from the Elven language are:
 - Anca - Quenya word for 'Jaws'.
 - And - 'long'.
 
-To achieve this, we will be using two computational methods: Finite Automata and Regular expressions
+To achieve this, we will be using two computational methods: Finite Automaton and Regular expressions
 
-### Finite Automata
+### Finite Automaton
 Acording to Geek for geeks (2024)
 > Finite automata are abstract machines used to recognize patterns in input sequences. 
 >They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
 >If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. (GeeksforGeeks, 2024) 
 
-Finite automata can be classified as:
-- Deterministic Finite Automata (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
-- Non-Deterministic Finite Automata (NFA) – A more flexible model where multiple transitions for the same input symbol can exist. (GeeksforGeeks, 2024)
+Finite automaton can be classified as:
+- Deterministic Finite Automaton (DFA) – A structured model where each state has a unique transition for every input symbol. (GeeksforGeeks, 2024)
+- Non-Deterministic Finite Automaton (NFA) – A more flexible model where multiple transitions for the same input symbol can exist. (GeeksforGeeks, 2024)
 
 ### Choice of DFA
-For this specific problem I decided to use a Deterministic Finite Automata (DFA) to represent my solution, some of the reasons why I chose this are:
+For this specific problem I decided to use a Deterministic Finite Automaton (DFA) to represent my solution, some of the reasons why I chose this are:
 -	Since the words don’t require multiple possibilities or choices at each state, a DFA is more suited since each input symbol leads to one specific state.
 -	An NFA would allow multiple possible transitions for a single input, which is not necessary in this case.
 -	DFA is more efficient in terms of time complexity because it guarantees a single path through the states, without needing to explore multiple possible transitions.
@@ -34,9 +34,9 @@ For this specific problem I decided to use a Deterministic Finite Automata (DFA)
 -	If I make an NFA at the end I will need to translate it to a DFA to program it.
 
 ## Models
-To represent and analyze our set of words, we will implement the two computational models mentioned before: Deterministic Finite Automata (DFA) and Regular expressions.
+To represent and analyze our set of words, we will implement the two computational models mentioned before: Deterministic Finite Automaton (DFA) and Regular expressions.
 
-### Derministic Finite Automata (DFA)
+### Derministic Finite Automaton (DFA)
 Given our selected set of words:
 **Amil, An, Anarya, Anca, And.**
 
@@ -47,7 +47,7 @@ By closely analyzing our set of words, we observe that our initial state will al
 
 In the same way we can determine that our final states will correspond to the last letters of each word: **‘l’, ‘n’, ‘a’, and ‘d’.**
 
-With this information we can build our Deterministic Finite Automata:
+With this information we can build our Deterministic Finite Automaton:
 
 **VERSION 1**
 
@@ -70,7 +70,7 @@ The language accepted by a finite automaton (it can be DFA or NFA) can be easily
 
 Steps to construct the regular expression for the language accepted by our automaton by analyzing some patterns that our language follow:
 
-*1.  Every word starts with the capital letter ‘A’*
+**1.  Every word starts with the capital letter ‘A’**
 
 In regular expressions, the symbol ^ means “start of the string”.
 
@@ -78,7 +78,7 @@ To ensure that every valid word starts with 'A', we begin our regular expression
 
     ^A
 
-*2. Words start with 'A' followed by 'n' and other characters (d, ca, arya) or just the letter ‘n’*
+**2. Words start with 'A' followed by 'n' and other characters (d, ca, arya) or just the letter ‘n’**
 
 In regular expressions:
 
@@ -96,7 +96,7 @@ So now, the regular expression becomes:
 
     ^A(n(d|ca|arya)?)
 
-*3. Words start with 'A' and end with the string 'mil'*
+**3. Words start with 'A' and end with the string 'mil'**
 
 Since it is only the string "mil", we can express this part simply as: 
 
@@ -105,7 +105,7 @@ Since it is only the string "mil", we can express this part simply as:
 Finally, by putting everything together, we get:
 
     ^A((n(d|ca|arya)?)|mil)
-    
+
 The parentheses around ‘(n(d|ca|arya)?)|mil’ ensures that the word follows one of the two patterns.
 
 
