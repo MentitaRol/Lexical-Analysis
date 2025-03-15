@@ -16,7 +16,8 @@ The selected set of words from the Elven language are:
 To achieve this, we will be using two computational methods: Finite Automaton and Regular expressions
 
 ### Finite Automaton
-Acording to Geek for geeks (2024)
+Acording to Geek for geeks (2024):
+
 Finite automata are abstract machines used to recognize patterns in input sequences. 
 They consist of states, transitions, and input symbols, processing each symbol step-by-step. 
 If the machine ends in an accepting state after processing the input, the word is recognized as valid; otherwise, it is rejected. (GeeksforGeeks, 2024) 
