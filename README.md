@@ -64,9 +64,9 @@ Although a formal state minimization methods exist, they were not applied in thi
 ![Image](https://github.com/user-attachments/assets/5236cbf0-00a9-4920-b98a-cb572aa33b12)
 
 ### Regular expressions
-A regular expression is a sequence of characters that defines a certain pattern. Regular expressions are normally used to search text for a group of words that matches the pattern. (Mathworks, n.d).
+>A regular expression is a sequence of characters that defines a certain pattern. Regular expressions are normally used to search text for a group of words >that matches the pattern. (Mathworks, n.d).
 
-The language accepted by a finite automaton (it can be DFA or NFA) can be easily described by a Regular expression. (TPoint Tech, n. d.).
+>The language accepted by a finite automaton (it can be DFA or NFA) can be easily described by a Regular expression. (TPoint Tech, n. d.).
 
 Steps to construct the regular expression for the language accepted by our automaton by analyzing some patterns that our language follow:
 
@@ -109,6 +109,8 @@ Finally, by putting everything together, we get:
     ^A((n(d|ca|arya)?)|mil)
 
 The parentheses around ‘(n(d|ca|arya)?)|mil’ ensures that the word follows one of the two patterns.
+
+
 
 
 ## References
