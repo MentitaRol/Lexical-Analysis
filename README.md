@@ -77,7 +77,7 @@ In regular expressions, the symbol ^ means “start of the string”.
 
 To ensure that every valid word starts with 'A', we begin our regular expression with:
 
-    ^A
+^A
 
 **2. Words start with 'A' followed by 'n' and other characters (d, ca, arya) or just the letter ‘n’**
 
