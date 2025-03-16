@@ -1,4 +1,4 @@
-%Author: Luisa Fernanda Valdez Guillén - A01711870
+%Author: Luisa Fernanda Valdez Guillï¿½n - A01711870
 %Date: March 13, 2025
 %Project: Lexical Analysis of Elven Language
 
@@ -36,7 +36,6 @@ process_word([Letter|RestOfWord],CurrentState):-
     transition(CurrentState,NextState,Letter),
     % Call the recursive case
     process_word(RestOfWord,NextState).
-
 
 
 
