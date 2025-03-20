@@ -255,18 +255,20 @@ This are our failed test cases:
 
 To execute our automaton tests, follow these steps in the Prolog terminal:
 
-*Load the test file:*
+**Load the test file:**
 
     [“test_automaton”].
 
-*Execute the run function:*
+**Execute the run function:**
 
-    run_test.
+    run_tests.
+
+![Image](https://github.com/user-attachments/assets/e73f5be7-86b3-491a-96d1-1501ba7b9e84)
 
 ### Regular expression
 In our file elven_regex.py, we define two lists of words:
-- *Valid words:* A set of words that should be correctly matched by our regular expression.
-- *Invalid words:* A set of words that should not be accepted, ensuring that our pattern correctly distinguishes between valid and invalid inputs.
+- **Valid words:** A set of words that should be correctly matched by our regular expression.
+- **Invalid words:** A set of words that should not be accepted, ensuring that our pattern correctly distinguishes between valid and invalid inputs.
 
 To execute the regular expression test, use the following command in the terminal:
    
@@ -274,6 +276,7 @@ To execute the regular expression test, use the following command in the termina
 
 This will print whether each word is valid or invalid based on the defined pattern and will allow the user to enter different words to check.
 
+![Image](https://github.com/user-attachments/assets/f137798a-8eba-44a9-9f73-d992a341321b)
 
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
