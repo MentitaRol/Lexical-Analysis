@@ -151,6 +151,50 @@ And our recursive case which allows us to analyze each letter of the word and th
 
 Here, for each letter in the word, we apply the ‘transition’ fact to move from the current state to the next state and continue the process for the rest of the word.
 
+### Regular expression:
+To fully explore the implementation of both models, the regular expression was also implemented.
+
+Our regular expression implementation will be done using Python, and our file name is ‘elven_regex.py’
+
+To implement regular expressions in Python, we first import the 're' library, which allows us to work with regular expressions:
+
+    import re
+
+Next, we define our regular expression as a variable called 'pattern':
+
+    pattern = r'^A((n(d|ca|arya)?)|mil)'
+
+We also define two sets of words: one set with valid words and another with invalid words, used for testing purposes:
+
+    valid = ["An","And","Anca","Anarya","Amil"]
+    invalid = ["A","Am","Ana","Anda","Ancanca","Amile","Ban","Amal","Ami","Ancarya"]
+
+To test our regular expression against our word sets, we run two for loops: one to check valid words and another to check invalid words. We use the 'fullmatch' function from the 're' library to verify that the entire word matches the regular expression:
+
+    for word in valid:
+        if re.fullmatch(pattern, word):
+            print(f"'{word} is a valid word")
+        else:
+            print(f"'{word} is not a valid word")
+
+    for word in invalid:
+        if re.fullmatch(pattern, word):
+            print(f"'{word} is a valid word")
+        else:
+            print(f"'{word} is not a valid word")
+
+Finally, just implement a while loop with an input so the user can test their own words
+
+    while True:
+        userInput = input("\nTo exit the program write ‘exit’: ")
+        if userInput.lower() == "exit":
+            break
+        if re.fullmatch(pattern, userInput):
+            print(f"'{userInput} is a valid word")
+        else:
+            print(f"'{userInput} is not a valid word")
+
+
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
 
