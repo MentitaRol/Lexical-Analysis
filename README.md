@@ -194,6 +194,86 @@ Finally, just implement a while loop with an input so the user can test their ow
         else:
             print(f"'{userInput} is not a valid word")
 
+## Test
+
+### Deterministic Finite Automaton (DFA)
+In our test_automaton.pl file, we define several test cases to validate the correct functioning of our DFA. These include successful test cases, which represent valid words of our language, and failed test cases, which should be rejected by the automaton.
+
+#### Successful test cases:
+The following test cases contain words that are correctly recognized by our DFA. These are the only words that should return ‘Successful’ when processed:
+
+This are our accepting test cases:
+
+    test1:-
+        start_automaton([a,n]).
+    test2:-
+        start_automaton([a,n,d]).
+    test3:-
+        start_automaton([a,n,c,a]).
+    test4:-
+        start_automaton([a,n,a,r,y,a]).
+    test5:-
+        start_automaton([a,m,i,l]).
+
+#### Failed test cases:
+To verify that our DFA functions correctly, we define test cases that include words similar to the valid words but that should be rejected. These tests ensure that the automaton only accepts the defined language.
+
+This are our failed test cases:
+
+    test0:-
+        start_automaton([]).
+
+    test6:-
+        start_automaton([a]).
+
+    test7:-
+        start_automaton([a,m]).
+
+    test8:-
+        start_automaton([a,n,a]).
+
+    test9:-
+        start_automaton([a,n,d,a]).
+
+    test10:-
+        start_automaton([a,n,c,a,n,c,a]).
+
+    test11:-
+        start_automaton([a,m,i,l,e]).
+
+    test12:-
+        start_automaton([b,a,n]).
+
+    test13:-
+        start_automaton([a,m,a,l]).
+
+    test14:-
+        start_automaton([a,m,a,l]).
+
+    test15:-
+        start_automaton([a,n,c,a,r,y,a]).
+
+To execute our automaton tests, follow these steps in the Prolog terminal:
+
+*Load the test file:*
+
+    [“test_automaton”].
+
+*Execute the run function:*
+
+    run_test.
+
+### Regular expression
+In our file elven_regex.py, we define two lists of words:
+- *Valid words:* A set of words that should be correctly matched by our regular expression.
+- *Invalid words:* A set of words that should not be accepted, ensuring that our pattern correctly distinguishes between valid and invalid inputs.
+
+To execute the regular expression test, use the following command in the terminal:
+   
+    python elven_regex.py
+
+This will print whether each word is valid or invalid based on the defined pattern and will allow the user to enter different words to check.
+
 
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
