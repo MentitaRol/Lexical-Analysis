@@ -216,7 +216,7 @@ This are our accepting test cases:
         start_automaton([a,m,i,l]).
 
 #### Failed test cases:
-To verify that our DFA functions correctly, we define test cases that include words similar to the valid words but that should be rejected. These tests ensure that the automaton only accepts the defined language.
+To verify that our DFA works correctly, we define test cases that include words similar to the valid words but that should be rejected. These tests ensure that the automaton only accepts the defined language.
 
 This are our failed test cases:
 
