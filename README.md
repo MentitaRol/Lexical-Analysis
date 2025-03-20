@@ -111,16 +111,53 @@ Finally, by putting everything together, we get:
 
 The parentheses around ‘(n(d|ca|arya)?)|mil’ ensures that the word follows one of the two patterns.
 
+## Implementation
+Once we have established and created the models that we are going to be using to test our lexical analysis, we can move on to making the corresponding implementations for our automaton and our regular expression.
 
+### Deterministic Finite Automaton (DFA)
+For this implementation, I based my approach on version 2 of the automaton presented in the previous section.
 
+We will be implementing our automaton using Prolog, and the implementation file is named ‘Elven_automaton.pl’
+
+The first step is to model the transitions between states and the values that lead us to each of them.
+To achive this, we define the structure of our automaton in our Prolog knowledge base as follows:
+   
+    transition (currentState, letter, nextState)
+
+Each ‘transition’ fact represents a valid transition from CurrentState to NextState when we have a valid letter of our language.
+
+To define the accepting states, we use the rule ‘final_state’ where we specify which states that are final states:
+
+    final_state(q4).
+    final_state(q6).
+
+Once we have established our transitions and our final states, we can define the condition that will allow us to traverse the automaton through states recursively until we reach an accepted final state. We define the starting point of the automaton as follows:
+
+    start_automaton(Word):-
+        process_word(Word,q0).
+
+In this rule, q0 represents the initial state.
+
+Our base case which we reached when we have completely traversed the assigned word, and we verified whether the current state is an accepted final state
+ 
+    process_word([],CurrentState):-
+        final_state(CurrentState).
+
+And our recursive case which allows us to analyze each letter of the word and the state it leads to:
+
+    process_word([Letter|RestOfWord], CurrentState):-
+        transition (CurrentState,NextState,Letter),
+        process_word(RestOfWord,NextState).
+
+Here, for each letter in the word, we apply the ‘transition’ fact to move from the current state to the next state and continue the process for the rest of the word.
 
 ## References
 GeeksforGeeks. (2024, september 12). Introduction of Finite Automata. GeeksforGeeks. https://www.geeksforgeeks.org/introduction-of-finite-automata/
 
-GeeksforGeeks. (2024, enero 29). Designing Deterministic Finite Automata (SET 11). GeeksforGeeks. https://www.geeksforgeeks.org/designing-deterministic-finite-automata-set-11/
+GeeksforGeeks. (2024, january 29). Designing Deterministic Finite Automata (SET 11). GeeksforGeeks. https://www.geeksforgeeks.org/designing-deterministic-finite-automata-set-11/
 
 Mathworks. (n. d.).  Regular expressions. https://www.mathworks.com/help/matlab/matlab_prog/regular-expressions.html 
 
-Tim Randolph. (2022, 22 mayo). Example 1: Designing and Building a DFA [Vídeo]. YouTube. https://www.youtube.com/watch?v=mWqUR-N7Iqk
+Tim Randolph. (2022, 22 may). Example 1: Designing and Building a DFA [Vídeo]. YouTube. https://www.youtube.com/watch?v=mWqUR-N7Iqk
 
 TPoint Tech. (n. d.). Regular expression. www.tpointtech.com. https://www.tpointtech.com/automata-regular-expression
